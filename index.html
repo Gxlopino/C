@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/nbhd.jpg" type="image/x-icon">
+    <title>You are flawless</title>
+
+</head>
+<body class="container">
+    <audio id="musica" loop> 
+        <source src="audio/flawless.mp3" type="audio/mpeg" >
+    </audio>
+    <audio id="musica1">
+        <source src="audio/stwiwgowy.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="musica2">
+        <source src="audio/starry eyes.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="musica3">
+        <source src="audio/scary love.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="musica4">
+        <source src="audio/her.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="musica5">
+        <source src="audio/sci-fi.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="musica6">
+        <source src="audio/song5.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+    
+        function showText() {
+            document.querySelector('.button').style.display = 'none';
+            const greetings = document.querySelector('.greetings');
+            greetings.style.display = 'block';
+            greetings.classList.add('animate-fade-in');
+            setTimeout(showNextButton, 4000); // Ajusta el tiempo según la duración de la animación
+        }
+
+        function showNextButton() {
+            const nextButton = document.querySelector('.next-button');
+            nextButton.style.display = 'block';
+            nextButton.classList.add('animate-button');
+        }
+
+        function showDefinition() {
+            const nextButton = document.querySelector('.next-button');
+            nextButton.style.display = 'none';
+            const definitions = document.querySelectorAll('.definicion');
+            definitions.forEach((definition) => {
+                definition.style.display = 'block';
+                definition.classList.add('animate-fade-in');
+            });
+        }
+
+        function playMusic(id) {
+    const audio = document.getElementById(id);
+    // Precarga el audio
+    audio.load();
+    
+    // Detener cualquier otra música que esté sonando
+    document.querySelectorAll('audio').forEach(a => {
+        if (a.id !== id) {
+            a.pause();
+            a.currentTime = 0;
+        }
+    });
+    
+    // Reproducir inmediatamente
+    const playPromise = audio.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log("Playback failed:", error);
+        });
+    }
+}
+    </script>
+
+    <div class="greetings" style="display: none;">
+        <span>You are flawless</span>
+    </div>
+    <canvas id="heart"></canvas>
+    <script src="./main.js"></script>
+   
+    <div class="definicion" style="display: none;">
+        <span class="sp">¿Sabes por qué hice esta página? Primero, quiero hacerte recordar algo. El día que dije que estaba interesado, estaba mintiendo, porque no era interés, sino que me gustabas. Y es por eso que ultimamente al verte actuaba extraño y distante porque no sabia que hacer, disuclpa si te llego a incomodar o molestar mis actitutes. Además como ya es 14 de febrero, decidí hacerte esta página web, la cual siempre tendrás, porque, a menos que no tengas señal, el internet mundial caiga o haya una catástrofe mundial, la tendrás ahí siempre.</span>
+        <div class="imagen-texto-container">
+            <img src="img/am.jpg" class="genam" >
+            <button class="song-button" onclick="playMusic('musica1')">Stop the world i wanna get off with you 0:18-0:53</button>
+        </div>
+    </div>
+    </div>
+    <div class="definicion" style="display: none;">
+        <span>Maybe quieres saber por qué me empezaste a gustar, y si no, no importa, es mi página web, así que hago lo que yo quiera. Todos dirán lo típico de "eres hermosa, inteligente, carismática y con un buen toque de humor", que ojo, pienso igual y nunca dudes de eso. Si alguien te dice lo contrario, es un pendejo.</span>
+          </div>
+    <div class="definicion" style="display: none;">
+        <span>
+            1.Me gusta tu forma de vestir, eso me llamó la atención.
+       </span>
+       <img src="img/xo.webp" class="genxo" >
+       <img src="img/nbhd.jpg" class="gennh" >
+          </div>
+    <div class="definicion" style="display: none;">
+        <span>2.Eres una persona con la cual se puede conversar de todo.
+        </span>
+       
+    </div>
+   <div class="definicion" style="display: none;">
+    <span>3.Tenemos gustos bastante similares, creo que tenemos más en común de lo que creemos.
+    </span>
+</div>
+<div class="definicion" style="display: none;">
+    <span> 4.Me enseñaste a que no hay que huir al primer problema, sino a querer arreglar las cosas.
+    </span>
+</div>
+<div class="definicion" style="display: none;">
+    <span> 5.El labial rojo te queda muy bien, te queda di-vi-no. AKSJAKJ.
+    </span>
+</div>
+<div class="definicion" style="display: none;">
+    <span> 6.Creo,que tenemos buena química.Es extraño porque es como fluir contigo, no tengo la necesidad de ser alguien más o fingir algo.
+    </span>
+</div>
+
+    <div class="definicion" style="display: none;">
+        <span>Y podría seguir, ¿no? Pero si no, no acabaría nunca. Aunque a veces te rayas y se te zafa un tornillo, un tornillo grande, por cierto. Aun con tus imperfecciones, en ti encontré algo que me hizo decir: "You are flawless", y me das ganas de mejorar.</span>
+        
+    </div>
+    <div class="definicion" style="display: none;">
+        <span class="sp">Me encariñé mucho contigo. I wanna be yours, sin importar el cómo ni el qué, y yo lo daría todo por ti, Die for You. Pero la verdad es que se me hace muy difícil. Para ser sincero, no pensé que te escribiría otra carta… y creo que esta será la última. Te escribí mi primera y mi última, porque dudo que vuelva a hacer algo así.</span>
+        <div class="imagen-texto-container">
+            <img src="img/a.webp" class="gena"  >
+            <button class="song-button_1" onclick="playMusic('musica2')">Starry Eyes 0:08-1:40
+            </button>
+         </div> 
+    </div>
+    <div class="definicion" style="display: none;">
+        <span>Te pido perdón porque he confundido las cosas y haber arruinado nuestra relación de amistad de esta manera. A que no te lo esperabas, ¿no? jaksj. También te pido disculpas por todos los problemas que te causé, y sí, fueron varios, sin duda. No sé qué más decir.  </span>
+   </div>
+    <div class="definicion" style="display: none;">
+        
+        <span class="sp">Y bueno, sé que lo que diré será un giro completo, porque precisamente por todo lo que mencioné antes, para mi bienestar es necesario alejarme y tomar distancia, cortar el contacto completamente. No es por orgullo ni por enojo, sino porque tenerte cerca es un recordatorio constante de que no puedo estar contigo, y eso me hace daño.</span>
+        <div class="imagen-texto-container">
+            <img src="img/nhb.jpg"  class='gennhb' >
+            <button class="song-button_2" onclick="playMusic('musica3')">Scary Love 0:13-1:22</button>
+        </div> 
+       </div>
+    <div class="definicion" style="display: none;">
+        <span>Para que me entiendas, lo que me haces sentir es como vivir dentro de Afraid y Nervous de The Neighbourhood, Friends de Chase Atlantic, Committed de Rauw, As you are de The Weeknd y Do I Wanna Know? de Arctic Monkeys.Para mí, siempre será mi baile inolvidable, no solo del 2024, sino para siempre...</span>
+   </div>
+    <div class="definicion" style="display: none;">
+        <span class="sp">Siempre te tendré conmigo porque me robé tus gustos musicales. Firme que tanto Chase Atlantic como The Neighbourhood son buenas bandas; no me arrepiento de haberlas escuchado por ti, porque cada vez que escuche esas bandas, te pensaré y estarás conmigo ahí, aunque ya no estés. Como en Fallen Star: "You are in my DNA" y "You are always in my brain".</span>
+        <img src="img/ca.webp" class="genca" >
+        <button class="song-button_3" onclick="playMusic('musica4')">Her 2:07-2:50</button>
+    </div>
+    <div class="definicion" style="display: none;">
+        <span>No me parecería justo simplemente desaparecer sin decir nada. Quizás sea algo mío, pero siempre he sido una persona responsable afectivamente, y me gusta expresar lo que siento. Recuerdo que, si alguna vez me iba o me alejaba, te dije que te diría todo lo que tenía que decir. Nunca pensé que llegaría el momento de hacerlo contigo.</span>
+   </div>
+    <div class="definicion" style="display: none;">
+        
+        <span class="sp">Si algún día necesitas algo, I am right here. Sabes quiénes son mis amigos, dónde ando por la U, tienes mi número y mi IG. Siempre será un placer ayudarte o simplemente hablar contigo. Puede que no tenga todas las soluciones, pero daré mi 100% y más para ayudarte.</span>
+        <div class="imagen-texto-container">
+            <img src="img/ra.webp" class="genra" >
+            <button class="song-button_4" onclick="playMusic('musica5')">Sci-Fi 1:45-2:43</button>
+
+        </div>
+    </div>
+    <div class="definicion" style="display: none;">
+        <span>Esto no es un adiós definitivo, es un hasta luego. Sé que en algún momento del futuro nos encontraremos otra vez. Te deseo mucho éxito en todo lo que hagas; espero que cumplas todo lo que te propongas y alcances las metas que me mencionaste. Sé que lo lograrás, eres una chica capaz de todo. Estoy orgulloso de ti, siempre lo estaré. Sin duda, me será imposible amar de nuevo, porque no podré encontrar a nadie como tú. </span>    
+    </div>
+    <div onclick=" startAnimation(); showText();playMusic('musica')" class="button">
+        <button>
+            <a>???</a>
+        </button>
+    </div>
+    <div onclick="showDefinition();" class="next-button" style="display: none;">
+        <button>
+            <a>Feliz 14 de febrero Cami <3 </a>
+        </button>
+    </div>
+    <div class="definicion galopino" style="display: none;">
+        <span>Galopino</span>
+        <img src="img/yo.jpg"  class="circular" class="gal"  >
+    </div>
+</body>
+</html>
